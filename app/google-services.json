@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "765197153316",
+    "project_id": "midterm-wallpaperapp",
+    "storage_bucket": "midterm-wallpaperapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:765197153316:android:8ca66544c54357cb0f94b1",
+        "android_client_info": {
+          "package_name": "com.example.shualeduri"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYD0MUPLbbg-oKl4sMOD9-B40VhCYND98"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

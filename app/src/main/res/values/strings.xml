@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Wallpaper App</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="categories">Categories</string>
+    <string name="views">Views:</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="repeat_password">Repeat Password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="do_not_have_an_account">Do not have an account?</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="set_lock_screen">Set Lock Screen</string>
+    <string name="set_home_screen">Set Home Screen</string>
+    <string name="set_both">Set Both</string>
+    <string name="profile">Profile</string>
+    <string name="home">Home</string>
+    <string name="downloads">Downloads:</string>
+    <string name="likes">Likes:</string>
+    <string name="comments">Comments:</string>
+    <string name="create_an_account">Create An Account</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="full_name">Full Name</string>
+    <string name="full_name_profile">Full Name:</string>
+    <string name="email_profile">Email:</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="set_as_profile_image">Set As Profile Image</string>
+    <string name="search">search</string>
+</resources>

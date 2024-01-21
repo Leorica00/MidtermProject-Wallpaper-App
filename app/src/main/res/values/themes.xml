@@ -1,0 +1,7 @@
+<resources>
+
+    <style name="Base.Theme.Shualeduri" parent="Theme.Material3.DayNight.NoActionBar">
+    </style>
+
+    <style name="Theme.Shualeduri" parent="Base.Theme.Shualeduri" />
+</resources>
