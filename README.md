@@ -38,11 +38,16 @@ Authentification
 <img src="https://i.imgur.com/Jz3SM3V.png" width="250"> <img src="https://i.imgur.com/CgRs5EX.png" width="250">  <img  
 src="https://i.imgur.com/FSbWNkT.png" width="250">
 
-Home Page
+Home Page 
+
 <img src="https://i.imgur.com/pObJBi9.png" width="250">
+
 Categories
+
 <img src="https://i.imgur.com/nySGOHb.png" width="250">
+
 Details
+
 <img   src="https://i.imgur.com/aDTgFsc.png" width="250">
 
 ## Permissions
