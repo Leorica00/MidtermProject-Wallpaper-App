@@ -1,6 +1,5 @@
 package com.example.shualeduri.presentation.screen.sign_in
 
-import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
@@ -11,22 +10,13 @@ import com.example.shualeduri.databinding.FragmentSignInBinding
 import com.example.shualeduri.presentation.base.BaseFragment
 import com.example.shualeduri.presentation.event.SignInEvent
 import com.example.shualeduri.presentation.state.sign_in.SignInState
-import com.google.firebase.Firebase
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.auth
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class SignInFragment : BaseFragment<FragmentSignInBinding>(FragmentSignInBinding::inflate) {
 
-    private lateinit var auth: FirebaseAuth
     private val signInViewModel: SignInViewModel by viewModels()
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        auth = Firebase.auth
-    }
 
     override fun setUpListeners() {
         binding.btnSignIn.setOnClickListener {
@@ -39,7 +29,7 @@ class SignInFragment : BaseFragment<FragmentSignInBinding>(FragmentSignInBinding
         }
 
         binding.tvGoToSignUp.setOnClickListener {
-            findNavController().navigate(SignInFragmentDirections.actionSignInFragmentToSignUpFragment())
+            signInViewModel.onEvent(SignInEvent.GoToSignUpFragmentEvent)
         }
     }
 
@@ -62,9 +52,14 @@ class SignInFragment : BaseFragment<FragmentSignInBinding>(FragmentSignInBinding
     }
 
     private fun handleUiEvent(event: SignInViewModel.SignInUiEvent) {
-        when(event) {
-            is SignInViewModel.SignInUiEvent.NavigateToWallpapers -> findNavController().navigate(SignInFragmentDirections.actionSignInFragmentToWallpaperFragment())
-            is SignInViewModel.SignInUiEvent.NavigateToSignUp -> findNavController().navigate(SignInFragmentDirections.actionSignInFragmentToSignUpFragment())
+        when (event) {
+            is SignInViewModel.SignInUiEvent.NavigateToWallpapers -> findNavController().navigate(
+                SignInFragmentDirections.actionSignInFragmentToWallpaperFragment()
+            )
+
+            is SignInViewModel.SignInUiEvent.NavigateToSignUp -> findNavController().navigate(
+                SignInFragmentDirections.actionSignInFragmentToSignUpFragment()
+            )
         }
     }
 
@@ -73,7 +68,7 @@ class SignInFragment : BaseFragment<FragmentSignInBinding>(FragmentSignInBinding
 
         with(binding) {
             tvSignInError.visibility = View.VISIBLE
-            if (state.errorMessage != ""){
+            if (state.errorMessage != "") {
                 tvSignInError.text = state.errorMessage
                 progressBarSignIn.visibility = View.INVISIBLE
             }
